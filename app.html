@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            // Prevent the form from being submitted
+            event.preventDefault();
+
+            // Get the search query from the input field
+            var searchQuery = document.getElementById("search-query").value;
+
+            // Redirect the user to the Google search results page for the query
+            window.location.href = "https://google.com/search?q=" + encodeURIComponent(searchQuery);
+        });
+    </script>
+
+    <title>SRN Web Developers</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">
+                <img src="logo.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                SRN Web Developers
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Our Services.html">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact Us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Our Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/">Promote
+                                    AI</a></li>
+                            <li><a class="dropdown-item" href="https://godigital.lmlo.lt/">Go Digital</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://blogs.oracle.com/uki/post/the-magic-of-technology">Technology
+                                    Magics</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://linktr.ee/advanced_boy">Follow Us Here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" id="search-form" type="submit">Search</button>
+                    </li>
+                    <li>
+                        <form class="container-fluid justify-content-start">
+                            <button class="btn btn-outline-danger me-2 my-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#signupModal">Sign Up</button>
+                            <button class="btn btn-outline-info me-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Log In</button>
+                        </form>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+    </nav>
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Register Yourself</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                First Name<input type="text" class="form-control" placeholder="Enter Your First name"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col">
+                                Last Name<input type="text" class="form-control" placeholder="Enter Your Last name"
+                                    aria-label="Last name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" placeholder="Enter Your Email"
+                                    id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Create a Password">
+                            </div>
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Re-enter Password">
+                                <div>
+                                    Already Have Account <button class="btn btn-outline-info me-2 my-2 mx-3"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log
+                                        In</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3"
+                                    placeholder="Enter Login Email">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Enter Your Password">
+                            </div>
+                        </div>
+                        <div>
+                            Create an Account <button class="btn btn-outline-info me-2 my-2 mx-3" type="button"
+                                data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align:center">Android & IOS App Development</h1>
+    <br><br>
+
+    Mobile app development is the process of creating software applications that run on mobile devices, such as
+    smartphones and tablets. These apps can be native, which means they are built specifically for one mobile
+    operating system (such as iOS or Android), or they can be cross-platform, which means they can run on multiple
+    operating systems.
+
+    The process of mobile app development involves a wide range of tasks, including conceptualization, design,
+    coding, testing, and deployment. It typically involves a team of developers, designers, and project managers
+    working together to bring an app from idea to reality.
+
+    To develop a mobile app, developers must first choose a programming language and development platform. There
+    are many options available, including native platforms such as iOS and Android, and cross-platform options
+    such as React Native and Flutter.
+
+    Once a development platform has been chosen, the next step is to design and build the app's user interface
+    (UI) and user experience (UX). This involves creating wireframes, prototypes, and high-fidelity mockups, and
+    testing the app to ensure it is easy to use and provides a seamless user experience.
+
+    After the app's UI and UX have been finalized, the development team can begin coding the app. This involves
+    writing the app's code in the chosen programming language and integrating any necessary APIs (Application
+    Programming Interfaces) and third-party services.
+
+    Once the app has been coded, it must be tested to ensure it is stable, performs well, and is free of bugs and
+    other issues. This can be done through a variety of testing methods, such as manual testing, automated
+    testing, and user testing.
+
+    Finally, once the app has been thoroughly tested and is ready for release, it must be deployed to app stores
+    such as the Apple App Store or Google Play Store. This involves creating app store listings, submitting the
+    app for review, and promoting the app to potential users.
+
+    Mobile app development is a complex and multi-faceted process that requires a wide range of skills and
+    expertise. It is an exciting and fast-growing field that offers a wide range of career opportunities for those
+    with the right skills and passion.
+    <br><br>
+    <br><br>
+    There are a lot of factors that weigh into the cost of an app, such as its features, development method, design
+    process, etc. Android apps typically take longer to build than iOS apps, which can make it a more expensive project.
+    On average, most mobile apps cost between $100,000 to $300,000. Depending on the complexity of the app, you might be
+    able to use a drag and drop app builder to get the cost down.
+
+    It’s important to keep in mind that there are also post-development costs associated with building an app, like
+    Google Play Store fees. These marketplace fees include a $25 one-time publishing cost, plus transaction fees of 30%
+    on all purchases for the first year. After Year 1, subscription fees drop to 15%.
+    <br><br>
+
+    While you can definitely teach yourself to code, I don’t recommend it if you’re seriously considering a career
+    change into development. You’ll most likely end up with a piecemeal app that doesn’t stay true to core principles.
+
+    You’re better off using one of the many awesome online courses available to help you learn Android app development.
+    Here are my favorite resources:
+
+    Udemy
+    Udemy offers a variety of app development courses, taught by experts, all with lifetime access. The course on
+    Android app development introduces Android Studio, Java, and additional Android features. With over 110,000 students
+    enrolled, this specific course includes 32 hours of video, 100+ articles, and a ton of other helpful resources.
+    Udemy is a great option for beginners just starting out. Costs vary per course.
+
+    best Android app developer course
+
+    Udacity
+    Udacity offers a free Android development course to give you an idea of what you’re in for before actually making an
+    investment. The next course on becoming an Android developer teaches you the best practices for app development and
+    even shows you how to publish your own app on the Google Play Store.
+
+    free online Android app developer course
+
+    How do I find the best Android app development company?
+    Android developers specialize in building apps for devices that run on the Android operating system. These firms
+    typically offer support in every stage of the app development process, including app design, building, testing, and
+    final release.
+    <br><br>
+    
+
+    <div class="card text-center">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Offer is Going on</h5>
+            <p class="card-text">
+                Sign up and Claim a free Website
+            </p>
+            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+    <div class="bg-warning p-2 text-white">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <a href="https://www.youtube.com/c/SRNTechnicalCreations">YouTube</a>
+                </div>
+                <div class="col">
+                    <a href="https://www.instagram.com/srn_technical_creations/">Instagram</a>
+                </div>
+                <div class="col">
+                    <a href="https://m.facebook.com/srntechnicalcreations/">Facebook</a>
+                </div>
+                <div class="col">
+                    <a href="https://mobile.twitter.com/SRNTechCreation">Twitter</a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/shreyashnandurkar">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

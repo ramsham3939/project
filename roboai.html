@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            // Prevent the form from being submitted
+            event.preventDefault();
+
+            // Get the search query from the input field
+            var searchQuery = document.getElementById("search-query").value;
+
+            // Redirect the user to the Google search results page for the query
+            window.location.href = "https://google.com/search?q=" + encodeURIComponent(searchQuery);
+        });
+    </script>
+
+    <title>SRN Web Developers</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">
+                <img src="logo.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                SRN Web Developers
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Our Services.html">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact Us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Our Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/">Promote
+                                    AI</a></li>
+                            <li><a class="dropdown-item" href="https://godigital.lmlo.lt/">Go Digital</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://blogs.oracle.com/uki/post/the-magic-of-technology">Technology
+                                    Magics</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://linktr.ee/advanced_boy">Follow Us Here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" id="search-form" type="submit">Search</button>
+                    </li>
+                    <li>
+                        <form class="container-fluid justify-content-start">
+                            <button class="btn btn-outline-danger me-2 my-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#signupModal">Sign Up</button>
+                            <button class="btn btn-outline-info me-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Log In</button>
+                        </form>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+    </nav>
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Register Yourself</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                First Name<input type="text" class="form-control" placeholder="Enter Your First name"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col">
+                                Last Name<input type="text" class="form-control" placeholder="Enter Your Last name"
+                                    aria-label="Last name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" placeholder="Enter Your Email"
+                                    id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Create a Password">
+                            </div>
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Re-enter Password">
+                                <div>
+                                    Already Have Account <button class="btn btn-outline-info me-2 my-2 mx-3"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log
+                                        In</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3"
+                                    placeholder="Enter Login Email">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Enter Your Password">
+                            </div>
+                        </div>
+                        <div>
+                            Create an Account <button class="btn btn-outline-info me-2 my-2 mx-3" type="button"
+                                data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align:center">Robotics, AI & Machine Learning</h1>
+    <br><br>
+
+    Artificial intelligence (AI) and robotics are two closely related fields that are transforming the way we live
+    and work.
+
+    AI involves the development of computer systems that can perform tasks that normally require human
+    intelligence, such as learning, problem-solving, and decision-making. These tasks are achieved through the use
+    of algorithms and machine learning techniques that allow computers to analyze and interpret data, and make
+    decisions based on that data.
+
+    Robotics, on the other hand, involves the design and development of robots, which are mechanical or
+    electromechanical devices that can be programmed to perform a variety of tasks. Robots can be used in a
+    variety of settings, including manufacturing, healthcare, and transportation, to perform tasks that are either
+    too dangerous, too repetitive, or too complex for humans to perform.
+
+    AI and robotics are revolutionizing many industries and have the potential to transform the way we live and
+    work. For example, AI-powered virtual assistants and chatbots are being used to improve customer service,
+    while AI-powered robots are being used in manufacturing and healthcare to improve efficiency and accuracy. In
+    transportation, self-driving vehicles are being developed that use AI to navigate roads and make decisions
+    about how to safely reach their destination.
+
+    However, the rapid advancement of AI and robotics also raises ethical concerns, such as the potential for job
+    displacement and the need for proper regulation to ensure the safe and responsible use of these technologies.
+    These issues will need to be carefully considered as AI and robotics continue to advance and become more
+    prevalent in society.
+
+    Overall, AI and robotics are exciting and rapidly evolving fields that have the potential to transform many
+    aspects of our lives. They offer exciting new possibilities and challenges, and will continue to shape the
+    future in ways that are difficult to predict.
+    <br><br>
+    Robotics involves the creation of robots to perform tasks without further intervention, while AI is how systems
+    emulate the human mind to make decisions and ‘learn.’
+
+    While you can have robotics with an AI element (and vice versa), both can, and usually do, exist independently of
+    each other.
+
+    For most robots, designed to perform simple, repetitive tasks, there’s no need for advanced AI as the duties are
+    simple, predictable and pre-programmed.
+
+    But many such AI-free robotics systems were created with past limitations of artificial intelligence in mind, and as
+    the technology continues to advance in leaps and bounds each year, robotics manufacturers may feel increasingly
+    confident in pushing the limits in what can be achieved by marrying the two disciplines.
+
+    The cited examples of AI in manufacturing, aerospace, healthcare and agriculture highlighted above can certainly
+    leave us feeling confident that the future is bright for robotics and artificial intelligence.
+    <br><br>
+
+    It is a well-recognized fact that Artificial Intelligence (AI) and robotics have been gaining a gigantic
+    collaboration around the globe for several kinds of purposes. The escalating demand and prominence of the robotic
+    have made life extremely easy. However, simultaneously an overly concerned hostility arises for human beings as the
+    robots are taking over all the jobs in the industrial world. Robots are bringing about productivity while at the
+    same time lessening the employment opportunities. Robots have already taken over all the blue-collar jobs. Now
+    robots have started to enter white-collar jobs as well. As a result, jobs in all areas will be at stake. Robots,
+    artificial friends, can perform low paid hard jobs in unsocial hours, generating a tremendous amount of comfort for
+    the world. There is a high possibility that future generations will see robots as teachers and carers as soon as the
+    robots are successfully learning feelings like compassion and complex response sensing. Robots perform jobs with
+    faster speed as studies suggest that one robot functions similarly to 70 full-time human workers [1]. The rise in
+    robotic adoption results in falling into employment opportunities [2]. However, the next generations can only be
+    able to achieve the fundamental advances of the robots after investing in this field for years[3].
+
+    We have done a systematic analysis of various kinds of robots by utilizing the comparison parameters to demonstrate
+    the fundamental objective of the development of the robots. The main objective of our research is to expose the
+    consequences of the robotics on human employment opportunities in all the areas. We have also discussed the future
+    of the human and robot relationship.
+
+    Advantages of automation and intelligent machines
+    • Predominantly in the industries of developed countries (countries with high labor costs), automation and the use
+    of production robots cause significant savings concerning the cost of labor and products. A production robot might
+    thus cost cheaper than a worker in China. Another characteristic is that robots do not fall sick, have children or
+    go on strikes and are not entitled to annual leaves.
+
+    • An intelligent machine need not rely on external components and can work unfailingly and continuously 24/7, and it
+    can work in danger zones. As an implication, its accuracy is greater than that of a human, and it cannot be
+    side-tracked either by fatigue or by other external circumstances.
+
+    • While making crucial decisions, intelligent systems can be governed by unprejudiced standards so that decisions
+    can be made practically, based on facts and data. Productivity expansions have so far always led to an upgrading of
+    living circumstances for everybody. The same applies to intelligent machines.
+
+    • The significant advantage for employees is that the burden of labor-intensive may reduce for them; tedious, dull
+    work can be done via self-ruling frameworks. The same is appropriate for typical back-end activities in the service
+    sector: frameworks can be designed to gather information naturally, transfer data from one system to another, and
+    find resolutions for problems. Once an interface between two systems is set up, manual intervention to enter data is
+    not necessary.
+
+    • Apart from supporting functions, intelligent machines can be designed with life-saving capabilities as well, for
+    example, robots used in medical diagnostics and inspection robots. These must be designed with high accuracy to
+    avoid any accidents and to have the best results.
+
+    Robots and robotics
+    Robots: A robot is an intensive, influential machine. Automotive control is used to guide a robot. The main
+    objective of the robots is to assist the world in daily routines. The actions that a robot can perform comprises of
+    picking the objects, moving, and destroying them, and modify them as directed [4].
+
+    Robot operating system: The robot operating system is a unique, comprehensive and opensource operating system that
+    is developed to control the robots. This system functions the same as the computer operating system. Functions of a
+    robot operating system are:
+
+    • Management of the hardware components, processes, and memory.
+
+    • Management of the data merging, concurrency, and parallelism.
+
+    The extensive use of AI and provision of hidden reasoning algorithms [5].
+
+    Robotics: Robotics is a branch of AI [6]. The mechanical construction is the property of the robots, which is used
+    to form or design a particular task. The power and control of machinery are handled by the electrical components
+    present in the robots. What, when, and how a robot performs a task is controlled by the computer program built in
+    the robot.
+
+    History of robots and robotics: Telemanipulators are machines that are controlled remotely and have an arm and a
+    gripper. Humans use a control device to give instructions to telemanipulators. The main objective of the
+    telemanipulators is to provide successful collaboration with the radioactive material. Numerical control provides
+    the facility to control the machine accurately. In 1952 for the first time, numeric control was used by MIT.
+    Numerical control caused the development of the APT (Automated, programmed tools). In 1961 the first industrial
+    robot was developed using these techniques. Those robots were used in industrial jobs such as car construction
+    plants. The desire for autonomous transport systems leads to the development of autonomous robots. Since 1975 the
+    humanoid robots are being developed. MIT-AI-Lab has been developing humanoid robots named ‘Cog’ since 1994. Robots
+    are the best friends of humans in science fiction. However, soon we will see the roles taking the jobs as universal
+    programmable machine slaves [4].
+
+    Ai and robotics: Artificial intelligence is a vast field that is also pushing its way in the domain of healthcare
+    [7], business [8] and social sector [9]. The concept of AI and robotics is based on an agent called an ‘actor’. An
+    actor is considered a software component, and it has a unique assembly of the hardware structure of the robot. The
+    unique link between actor and physical structure of the robot enables the control of the robot through the actor.
+    The software component uses sensors to read the data. After completing the reading process, the robot decides to
+    take the next action and give directions to its effectors to act physically in the environment [6]. AI-Robotics
+    intersection covers the following concerns:
+
+    • Actions that are planned, including the monitoring and the reasons behind the goal.
+
+    • Through open environments, we have modelling, understanding, and picking.
+
+    • Developing interaction with humans as well as other robots.
+
+    • Learning models that are required by the functions.
+
+    And combining those functions to develop a flexible and durable architecture [4].
+
+    Analysis of different robots: Gradually different types of robots have been invented. In Table I, we have provided a
+    comparative study of various types of robots.
+
+    <div class="card text-center">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Offer is Going on</h5>
+            <p class="card-text">
+                Sign up and Claim a free Website
+            </p>
+            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+    <div class="bg-warning p-2 text-white">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <a href="https://www.youtube.com/c/SRNTechnicalCreations">YouTube</a>
+                </div>
+                <div class="col">
+                    <a href="https://www.instagram.com/srn_technical_creations/">Instagram</a>
+                </div>
+                <div class="col">
+                    <a href="https://m.facebook.com/srntechnicalcreations/">Facebook</a>
+                </div>
+                <div class="col">
+                    <a href="https://mobile.twitter.com/SRNTechCreation">Twitter</a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/shreyashnandurkar">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

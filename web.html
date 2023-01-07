@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            // Prevent the form from being submitted
+            event.preventDefault();
+
+            // Get the search query from the input field
+            var searchQuery = document.getElementById("search-query").value;
+
+            // Redirect the user to the Google search results page for the query
+            window.location.href = "https://google.com/search?q=" + encodeURIComponent(searchQuery);
+        });
+    </script>
+
+    <title>SRN Web Developers</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html">
+                <img src="logo.jpeg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                SRN Web Developers
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Our Services.html">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact Us.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Our Projects</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="https://www.brookings.edu/research/how-artificial-intelligence-is-transforming-the-world/">Promote
+                                    AI</a></li>
+                            <li><a class="dropdown-item" href="https://godigital.lmlo.lt/">Go Digital</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://blogs.oracle.com/uki/post/the-magic-of-technology">Technology
+                                    Magics</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="https://linktr.ee/advanced_boy">Follow Us Here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-light" id="search-form" type="submit">Search</button>
+                    </li>
+                    <li>
+                        <form class="container-fluid justify-content-start">
+                            <button class="btn btn-outline-danger me-2 my-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#signupModal">Sign Up</button>
+                            <button class="btn btn-outline-info me-2" type="button" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Log In</button>
+                        </form>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
+    </nav>
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Register Yourself</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                First Name<input type="text" class="form-control" placeholder="Enter Your First name"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col">
+                                Last Name<input type="text" class="form-control" placeholder="Enter Your Last name"
+                                    aria-label="Last name">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" placeholder="Enter Your Email"
+                                    id="inputEmail3">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Create a Password">
+                            </div>
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Re-enter Password">
+                                <div>
+                                    Already Have Account <button class="btn btn-outline-info me-2 my-2 mx-3"
+                                        type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Log
+                                        In</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3"
+                                    placeholder="Enter Login Email">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3"
+                                    placeholder="Enter Your Password">
+                            </div>
+                        </div>
+                        <div>
+                            Create an Account <button class="btn btn-outline-info me-2 my-2 mx-3" type="button"
+                                data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align:center">Web Applications</h1>
+    <br><br>
+    Web development is the process of building and maintaining websites. It involves a wide range of tasks,
+    including designing and building the front-end and back-end of a website, creating and implementing a
+    website's content, and ensuring that a website is functional, user-friendly, and secure.
+
+    Web developers use a variety of programming languages and technologies to create and maintain websites. Some
+    of the most common programming languages used in web development include HTML (HyperText Markup Language), CSS
+    (Cascading Style Sheets), and JavaScript. These languages are used to create the structure, style, and
+    interactivity of a website.
+
+    Web developers may also use server-side languages such as PHP (PHP: Hypertext Preprocessor) and Ruby on Rails
+    to build the back-end of a website, which is responsible for storing and organizing data, and processing user
+    requests.
+
+    In addition to programming languages, web developers may also use a variety of tools and frameworks to help
+    them build and maintain websites. These tools can range from simple text editors, to more complex integrated
+    development environments (IDEs), to content management systems (CMS) that allow non-technical users to manage
+    a website's content.
+
+    Web development is a constantly evolving field, as new technologies and best practices emerge. As such, web
+    developers must be willing to continuously learn and adapt to keep up with the latest trends and techniques.
+
+    Web development is a crucial part of the modern internet, as it enables businesses, organizations, and
+    individuals to share information and interact with a global audience. It is an exciting and dynamic field that
+    offers a wide range of career opportunities for those with the right skills and passion.
+    <br><br>
+    "Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of
+    complexity to design and develop websites. "
+
+    This program covers UI Design (HTML|CSS| Javascripts | Jquery), PHP development for the web, quick to learn, easy to
+    deploy and provides substantial functionality required for ecommerce along with Database MYSQL. Perform hands-on
+    practice with database to create databasedriven HTML forms and reports.
+
+    WHY WEB DEVELOPMENT IS IMPORTANT?
+
+    A well-designed website is essential for reaching a larger audience and generating more leads or customers. Using a
+    website, you can collect and read testimonials about your products and services much more quickly and easily. Web
+    development and design help to promote a company's brand name.
+
+    Web Development can be classified into two ways:
+
+    Front-end Development
+    No alt text provided for this image
+
+
+    2.Back-end Development
+
+    No alt text provided for this image
+
+
+
+
+    APP USED FOR WEB DEVELOPMENT VS CODE (VISUAL STDIO CODE ):
+
+    Visual Studio Code is a streamlined code editor with support for development operations like debugging, task
+    running, and version control. It aims to provide just the tools a developer needs for a quick code-build-debug cycle
+    and leaves more complex workflows to fuller featured IDEs, such as Visual Studio IDE.
+
+    No alt text provided for this image
+    In every Software web application development User interface designing and development play major role. User
+    Interaction happen to UI as soon as open webpage. The user interface will be combination of HTML4,5, CSS2,3,
+    Javascript, Jquery, Angular, XML Parsing, JSON Parsion, API Web services. Learn all the skills, tools, and processes
+    you need to become a UI designe
+    <br><br>
+    HTML and the DOM
+    HTML and DOM viewer and editor is commonly included in the built-in web development tools. The difference between
+    the HTML and DOM viewer, and the view source feature in web browsers is that the HTML and DOM viewer allows you to
+    see the DOM as it was rendered in addition to allowing you to make changes to the HTML and DOM and see the change
+    reflected in the page after the change is made.
+
+    In addition to selecting and editing, the HTML elements panels will usually also display properties of the DOM
+    object, such as display dimension, and Cascading- style sheet properties.
+
+
+    3D page inspector, a feature of Firefox versions 11 to 46.
+    Firefox versions 11 to 46 were equipped with a 3D page inspector using WebGL, where the nesting of elements was
+    visualized with layers protruding from the page surface.
+
+    Web page assets, resources and network information
+    Web pages typically load and require additional content in the form of images, scripts, font and other external
+    files. Web development tools also allow developers to inspect resources that are loaded and available on the web
+    page in a tree-structure listing, and the appearance of style sheets can be tested in real time.
+
+    Web development tools also allow developers to view information about the network usage, such as viewing what the
+    loading time and bandwidth usage are and which HTTP headers are being sent and received.
+
+    Profiling and auditing
+    Profiling allows developers to capture information about the performance of a web page or web application. With this
+    information developers can improve the performance of their scripts. Auditing features may provide developers
+    suggestions, after analyzing a page, for optimizations to decrease page load time and increase responsiveness. Web
+    development tools typically also provide a record of the time it takes to render the page, memory usage, and the
+    types of events which are taking place.
+
+    These features allow developers to optimize their web page or web application.
+
+    JavaScript debugging
+    JavaScript is commonly used in web browsers. Web development tools commonly include a panel to debug scripts by
+    allowing developers to add watch expressions, breakpoints, view the call stack, and pause, step over, step into, and
+    step out of functions while debugging JavaScript.
+
+    A JavaScript console is commonly included. The consoles allow developers to type in JavaScript commands and call
+    functions, or view errors that may have been encountered during the execution of a script.
+
+    <br><br>
+
+    <div class="card text-center">
+        <div class="card-header">
+            Featured
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Offer is Going on</h5>
+            <p class="card-text">
+                Sign up and Claim a free Website
+            </p>
+            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+    <div class="bg-warning p-2 text-white">
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col">
+                    <a href="https://www.youtube.com/c/SRNTechnicalCreations">YouTube</a>
+                </div>
+                <div class="col">
+                    <a href="https://www.instagram.com/srn_technical_creations/">Instagram</a>
+                </div>
+                <div class="col">
+                    <a href="https://m.facebook.com/srntechnicalcreations/">Facebook</a>
+                </div>
+                <div class="col">
+                    <a href="https://mobile.twitter.com/SRNTechCreation">Twitter</a>
+                </div>
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/shreyashnandurkar">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
